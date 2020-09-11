@@ -1,0 +1,31 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+}
+
+body > header {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 3fr auto;
+    align-items: center;
+}
+body > header > h1 {
+    margin: 0;
+}
+
+header > nav > ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+}
+

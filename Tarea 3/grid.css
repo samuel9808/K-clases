@@ -1,0 +1,142 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+/* FIRST CELL */
+
+ul.first {
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    display: grid;
+    list-style-type: none;
+    grid-template-rows: repeat(5, 80px);
+    grid-template-columns: repeat(5, 80px);
+}
+
+ul.first li {
+    height: 40%;
+    width: 100%;
+    transform: rotate(-35deg);
+    background-color: black;
+    border-radius: 10%;
+}
+
+ul.first li:nth-child(2n+4){
+    height:50%;
+    width: 50%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+}
+
+/* SECOND CELL */
+
+ul.second {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 2fr 1fr 3fr 10px 100px 10px;
+    grid-template-rows: 1fr 2fr 3fr 100px;
+    margin: 0;
+    padding: 0;
+}
+
+ul.second .border {
+    grid-row: 1/-1;
+    grid-column: -4/-3;
+    background-color: black;
+}
+
+ul.second .border2 {
+    grid-row: 1/-2;
+    grid-column: -1/-2;
+}
+
+ul.second .lilsq {
+    grid-row: -1/-2;
+    grid-column: -3;
+    background-color:red;
+}
+
+ul.second .bigsq {
+    grid-row: 1/span 2;
+    grid-column: 1/span 2;
+    background: cyan;
+    z-index: 1;
+}
+
+ul.second .bigsq2 {
+    grid-row: 2/span 2;
+    grid-column: 2/span 2;
+    background: rgb(255, 255, 70);
+}
+ul.second .bigsq2:hover{
+    background-color: rgb(250, 250, 107);
+    z-index: 1;
+}
+
+ul.second h1.text {
+    grid-row: -2/-4;
+    grid-column: -3;
+    align-self: end;
+    justify-self: center;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 0.5em);
+}
+
+ul.second h1 span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+ul.second span b {
+    width: 5px;
+    height: 20px;
+    background: red;
+    display: inline-block;
+    margin-bottom: 0.1em;
+}
+
+ul.second span b.large {
+    height: 200px;
+}
+
+/* THIRD CELL */
+
+div.third {
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.box {
+    background: #f6f3ea;
+    box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.box:nth-child(1) {
+    grid-row: 3 /span 3;
+    grid-column: 3/ span 2;
+}
+.box:nth-child(2) {
+    grid-row: 1 /span 2;
+    grid-column: 1/ span 2;
+}
+.box:nth-child(3) {
+    grid-row: 5/ span 2;
+    grid-column: 1/ span 2;
+}
+.box:nth-child(4) {
+    grid-row: 1/ span 2;
+    grid-column: 4/ span 2;
+}
+

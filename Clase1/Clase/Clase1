@@ -1,0 +1,11 @@
+Nav: Puede ser algo individual o puede estar dentro de una sección.
+
+H1: Una sección debería tener solamente un H1, perteneciendo este al Header. De ahí en adelante los títulos bajarían de categoría.
+
+Article: Especialización de section.
+
+DL: Como un Ul, pero de terminos, contienen dt y dd. Definition Term y Definition Description.
+
+Pensar primero en la estructura, luego en la visualización, ayuda a la manipulación de los items.
+
+

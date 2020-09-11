@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    margin: auto;
+    width: 90vw;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+}
+.a,
+.b {
+    grid-column:1;
+    grid-row:1;
+}
+
+.b {
+    width: 3em;
+    height: 3em;
+    align-self: end;
+    justify-self: end;
+    margin: 1em;
+}
+
+.box{
+    border:1px solid green;
+}
