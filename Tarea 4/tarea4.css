@@ -18,7 +18,16 @@ body > header {
     align-items: center;
 }
 body > header > h1 {
+    height: 36px;
     margin: 0;
+}
+body > header > h1:after {
+    background-image: url(briefcase.png);
+    background-size: 36px 36px;
+    display:inline-block;
+    width: 36px;
+    height: 36px;
+    content:" ";
 }
 
 header > nav > ul {
@@ -26,6 +35,14 @@ header > nav > ul {
     display: flex;
     padding: 0;
     margin: 0;
+}
 
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 10px;
+    font-weight: bold;
 }
 
