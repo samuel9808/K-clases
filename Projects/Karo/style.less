@@ -14,15 +14,18 @@ html {
     font-size: 16px;
     color: white;
 }
-a {
-    text-decoration: none;
+
+.font-style-bold() {
+    &:extend(.font-style);
+    font-weight: bold;
 }
 
 body {
-    height: 100%;
     .font-style;
-    background: linear-gradient(-4deg, white 40%, @back-color 40.2%);
+    height: 100%;
+    background: linear-gradient(-4deg, white 30%, @back-color 30.2%);
     header {
+        font-weight: bold;
         display:grid;
         grid-template-columns: auto 1fr auto;
         align-items: center;
@@ -34,7 +37,6 @@ body {
             display: flex;
             padding: 0;
             margin: 0;
-            font-weight: bold;
             li + li{
                 margin-left: 30px;
             }
@@ -54,11 +56,15 @@ body {
         }
         .main-nav {
             justify-self: center;
-            ul li a {
+            a {
                 color: rgb(184, 184, 184);
             }
         }
     }
+}
+
+a {
+    text-decoration: none;
 }
 
 .flex-column-center {
@@ -74,7 +80,6 @@ body {
 
 main {
     .description {
-        .font-style;
         .flex-column-center;
         h1 {
             margin-top: 1.2em;
@@ -100,10 +105,9 @@ main {
 
 .play-button {
     display: flex;
-    .font-style;
-    font-weight: bold;
+    .font-style-bold();
     padding: 10px;
-    margin-left: 100px;
+    margin-left: 40px;
     align-items: center;
     &::before {
         content: "";
@@ -119,10 +123,9 @@ main {
 }
 
 .button {
-    .font-style;
+    .font-style-bold();
     background-color: rgb(79, 201, 201);
     border: 1px solid rgba(0, 0, 0, 0.26);
     padding: 1.1em;
     border-radius: 10px;
-    font-weight: bold;
 }
