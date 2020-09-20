@@ -1,13 +1,12 @@
 
-.d3 {
+.d3, .d32 {
 	position: relative;
 	width: 500px;
 	height: 500px;
 	background: silver;
-	perspective: 1000px;
 }
 
-.d3, .d3 * {
+.d3, .d3 *, .d32, .d32 * {
     transform-style: preserve-3d;
 }
 
@@ -21,10 +20,9 @@
 	transform-origin: 50% 50% 50px;
 }
 
+
 .dice > div {
 	position: absolute;
-	top: 0;
-	left: 0;
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
@@ -33,6 +31,7 @@
     background: url(images/dice.png) no-repeat;
     background-size: 300px 200px;
 }
+
 
 .dice .a {
     background-position: -200px 0px;
@@ -61,5 +60,54 @@
 
 .dice .f {
     transform-origin: 100px 0px;
+    transform: rotateY(-30deg);
+}
+
+.dice2 {
+	position: absolute;
+	top: 50px;
+	left: 150px;
+	width: 200px;
+	height: 200px;
+	transform: translateZ(120px) rotateX(-107deg) rotateZ(170deg) rotateY(0deg);
+	transform-origin: 50% 50% 50px;
+}
+.dice2 > div {
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #000;
+    opacity: 0.9;
+    background: url(images/dice.png) no-repeat;
+}
+
+.dice2 .a {
+	background-position: -400px 0px;
+    transform: rotateY(90deg) translateZ(-100px) translateX(-100px);
+}
+
+.dice2 .b {
+	background-position: -200px -200px;
+    transform: rotateY(90deg) translateZ(100px) translateX(-100px);
+}
+
+.dice2 .c {
+	background-position: 0px -200px;
+    transform: rotateX(90deg) translateZ(100px) translateY(100px);
+}
+
+.dice2 .d {
+	background-position: -200px 0px;
+    transform: rotateX(90deg) translateZ(-100px) translateY(100px);
+}
+
+.dice2 .e {
+	background-position: -400px -200px;
+    transform: translateZ(200px);
+}
+
+.dice2 .f {
+    transform-origin: 200px 0px;
     transform: rotateY(-30deg);
 }
