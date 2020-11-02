@@ -30,15 +30,19 @@
 			//source.connect(audioContext.destination);
 
 			function run(data, i) {
-				context.clearRect(0, 0 , width, height);
+				context.clearRect(0, 0, width, height);
+
+				let avg = 0;
 
 				for (let i = 0; i < data.length; i++) {
 					let absData = Math.abs(data[i]);
-					let normalizedData = absData*200;
-					context.beginPath();
-					context.arc(250, 250, normalizedData, 0, 2 * Math.PI);
-					context.fill();
-				}
+					avg += absData;
+				};
+
+				let normalizedData = avg * 1.5;
+				context.beginPath();
+				context.arc(250, 250, 10+normalizedData, 0, 2 * Math.PI);
+				context.fill();
 			}
 
 			requestAnimationFrame(function step() {
